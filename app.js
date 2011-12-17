@@ -1,29 +1,25 @@
 var express = require("express");
 var connect = require("connect");
 
-var conf = {
-  'name': 'example.com',
-  'port': process.env.PORT || 8585,
-  'sessionSecret': 'lorem123'
-};
+var conf = { 'name': 'example.com', 'port': process.env.PORT || 8585, 'sessionSecret': 'lorem123'};
 
 /* Compress generated less files  */
 var less;
 express.compiler.compilers.less.compile = function (str, fn) {
-  if (!less) less = require("less");                                                      
+  if (!less) { 
+    less = require("less"); }
+    
   try {
-      less.render(str, { compress : true }, fn);
-  } catch (err) {
-      fn(err);
-  }
+    less.render(str, { compress : true }, fn); } 
+  catch (err) {
+    fn(err); }
 };
-
 
 var srv = express.createServer(
   /* Optional: Use SSL certificate */
-  /* {   ca:     fs.readFileSync('/var/node/rapdb/cert/general/sub.class1.server.ca.pem').toString(),
-    , key:    fs.readFileSync('/var/node/rapdb/cert/static/static.key').toString(), 
-    , cert:   fs.readFileSync('/var/node/rapdb/cert/static/static.crt').toString()},  */
+  /* {   ca:     fs.readFileSync(__dirname + '/cert/ca.pem').toString(),
+    , key:    fs.readFileSync(__dirname + '/cert/domain.key').toString(), 
+    , cert:   fs.readFileSync(__dirname + '/cert/domain.crt').toString()},  */
   /* Optional: Use global db connection handler */
   /* function(req, res, next) { if (req.db === undefined) { req.db = db; } next(); } */);
 
