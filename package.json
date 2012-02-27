@@ -2,7 +2,7 @@
   "author": "semu <c@semu.mp> (http://github.com/semu)",
   "name": "kickstart",
   "description": "Preconfigured Express environment with less and jade rendering. See http://github.com/semu/node-kickstart-example for usage.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/semu/node-kickstart",
   "contributors": [ 
     { "name": "Sebastian Müller", "email": "c@semu.mp" }],
@@ -11,7 +11,7 @@
     "url": "git://github.com/semu/node-kickstart.git"
   },
   "engines": {
-    "node": "~v0.4.10"
+    "node": ">= 0.4.10"
   },
   "keywords": ["express", "framework", "sinatra", "web", "rest", "restful", "jade", "less", "bootstrap", "kickstart"],  
   "main": "index",
