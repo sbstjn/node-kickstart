@@ -2,7 +2,7 @@
   "author": "semu <c@semu.mp> (http://github.com/semu)",
   "name": "kickstart",
   "description": "Preconfigured Express environment with less and jade rendering. See http://github.com/semu/node-kickstart-example for usage.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://github.com/semu/node-kickstart",
   "contributors": [ 
     { "name": "Sebastian Müller", "email": "c@semu.mp" }],
